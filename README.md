@@ -1,4 +1,4 @@
-# get_next_line: Custom Implementation of Line Reading
+# get\_next\_line: Custom Implementation of Line Reading
 
 ## Overview
 
@@ -15,7 +15,7 @@ The `get_next_line` function reads from a file descriptor and returns the next l
   - **`read_line()`**: Reads content from the file descriptor and appends it to a buffer until a newline or EOF is reached.
   - **`take_line()`**: Extracts the current line from the buffer, up to and including the newline character.
   - **`take_next()`**: Stores the remaining characters after the newline for the next call.
-  - **`ft_malloc()`, `ft_strlen()`, `ft_strchr()`, `ft_strjoin()`**: Utility functions for memory allocation, string manipulation, and joining strings.
+  - **`ft_malloc()`**, **`ft_strlen()`**, **`ft_strchr()`**, **`ft_strjoin()`**: Utility functions for memory allocation, string manipulation, and joining strings.
 
 ### Example Usage
 
@@ -53,6 +53,7 @@ To compile the code, use the provided `Makefile` to create the necessary object 
 ```sh
 make
 ```
+
 This command will generate the necessary object files for `get_next_line`. You can link it with other C files to create your executable.
 
 ## Example Output
@@ -68,6 +69,10 @@ Line 2: This is the second line.
 ## Limitations
 
 The current implementation does not handle multi-line inputs efficiently when `BUFFER_SIZE` is too small, as it may require multiple iterations to read a complete line. Also, the performance may vary depending on the size of the buffer (`BUFFER_SIZE`). It is essential to choose a suitable value for `BUFFER_SIZE` based on the use case.
+
+## Bonus Version
+
+The bonus version of `get_next_line` extends the functionality to handle multiple file descriptors simultaneously. This allows reading from different files or inputs without losing track of each one's progress. The original version was designed with this functionality in mind, allowing seamless handling of multiple file descriptors.
 
 ## Conclusion
 
